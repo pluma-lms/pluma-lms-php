@@ -23,7 +23,7 @@
         </div>
         
         <div id='rightbar'>
-            <iframe src="./calender.php"></iframe>
+            <iframe src="./calendar.php"></iframe>
         </div>
         <?php 
          
