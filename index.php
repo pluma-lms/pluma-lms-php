@@ -1,9 +1,40 @@
-<?php
 /**
  * Pluma
  * Main page
  * @authors CJ Duffee, Jeffrey Wang
 */
+<!DOCTYPE HTML>
+<html>
+    <style>
+        #leftbar
+        {
+            float: left;
+        }
+        #rightbar
+        {
+            float: right;
+        }
+    </style>
+       
+    <body>
+        <h1>Pluma</h1>  
+        <div id='leftbar'>
+            <iframe src="./notifications.php"></iframe>
+        </div>
+        
+        <div id='rightbar'>
+            <iframe src="./calender.php"></iframe>
+        </div>
+        <?php 
+         
+         ?> 
+    </body>
+    
+</html>
+
+
+/**
+<?php
 // Import settings
 require_once ( "settings.php" );
 // Get user settings and preferences here
@@ -42,3 +73,4 @@ if ( empty ( $_REQUEST['page'] ) ) {
     </div>
   </body>
 </html>
+*/
