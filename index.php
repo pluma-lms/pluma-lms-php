@@ -10,9 +10,9 @@
 // Get user settings and preferences here
 // Get language
 if ( empty ( $user_settings['language'] ) ) {
-    require_once ( "language_eng.php" );
+    require_once ( "includes/languages/language_eng.php" );
 } else {
-    require_once ( "language_" . $user_settings['language'] . ".php" ); 
+    require_once ( "includes/languages/language_" . $user_settings['language'] . ".php" ); 
 }
 //if ( empty ( $_REQUEST['page'] ) ) {
 //  $page = 'home';
