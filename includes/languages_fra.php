@@ -6,7 +6,7 @@
 
 $translations = array (
   'notifications' => 'Notifications',
-  'grades' => 'Qualités',
+  'grades' => 'Notes',
   'vitals' => 'Vitals',
   'attendance' => 'Attendance',
 );
