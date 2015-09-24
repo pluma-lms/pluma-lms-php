@@ -3,7 +3,7 @@
  * Main page
  * @authors CJ Duffee, Jeffrey Wang
 */
-<!DOCTYPE html>
+<!DOCTYPE html lang=en.US>
 <?php
 // Import settings
 //require_once ( "settings.php" );
