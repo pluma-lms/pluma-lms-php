@@ -28,13 +28,19 @@ if ( empty ( $user_settings['language'] ) ) {
             #leftbar
             {
                 float: left;
+                width: 49%;
             }
             #rightbar
             {
                 float: right;
+                width: 49%;
+            }
+            h1
+            {
+                font-style: italic;
             }
         </style>
-        <title><?php //echo $organization_settings['name']; ?> | Pluma</title>
+        <title><?php //echo $organization_settings['name']; ?>Pluma</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <!-- Latest compiled and minified JavaScript -->
@@ -44,7 +50,7 @@ if ( empty ( $user_settings['language'] ) ) {
     </head>
     <body>
         <div class="container">
-            <p>Pluma</p>
+            <h1>Pluma</h1>
             <br />
             <?php //echo "<img src=\"" . $organization_settings['image_url'] . "\" alt=\"" . $organization_settings['name'] . " />"; 
 		?>
@@ -59,10 +65,10 @@ if ( empty ( $user_settings['language'] ) ) {
                 Your browser doesn't seem to support iframes. Pluma requires iframes.
             </iframe>-->
             <div id="leftbar">
-                <iframe src="./notifications.php"></iframe>
+                <iframe src="./notifications.php" width="100%"></iframe>
             </div>
             <div id="rightbar">
-                <iframe src="./calendar.php"></iframe>
+                <iframe src="./calendar.php" width="100%"></iframe>
             </div>
         </div> 
     </body>
