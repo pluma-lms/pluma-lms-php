@@ -3,8 +3,7 @@
         <?php
                 date_default_timezone_set('America/Chicago');
         ?>
-        <h1>
-            <?php echo date('F Y'); ?></h1>
+        <h1><?php echo $time[weekday]  ." " .$time[month]  ." "  .$time[wday] .", "  .$time[year] ?></h1>
         <table>
             <tr>
                 <td>Sunday</td>
