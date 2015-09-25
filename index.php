@@ -1,8 +1,10 @@
+<?php
 /**
  * Pluma
  * Main page
  * @authors CJ Duffee, Jeffrey Wang
 */
+?>
 <!DOCTYPE html lang=en.US>
 <?php
 // Import settings
@@ -44,7 +46,8 @@ if ( empty ( $user_settings['language'] ) ) {
         <div class="container">
             <p>Pluma</p>
             <br />
-            <?php //echo "<img src=\"" . $organization_settings['image_url'] . "\" alt="<?php echo $organization_settings['name']; ?>" />; ?>
+            <?php //echo "<img src=\"" . $organization_settings['image_url'] . "\" alt=\"" . $organization_settings['name'] . " />"; 
+		?>
             <br />
             <ul class="nav nav-pills">
                 <li role="presentation" class="active"><a href="index.php?page=notifications"><?php echo $translations['notifications']; ?></a></li>
