@@ -2,6 +2,8 @@
     <body>
         <?php
                 date_default_timezone_set('America/Chicago');
+                $time = getdate();
+
         ?>
         <h1><?php echo $time[weekday]  ." " .$time[month]  ." "  .$time[wday] .", "  .$time[year] ?></h1>
         <table>
