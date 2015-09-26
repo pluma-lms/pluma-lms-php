@@ -5,6 +5,7 @@
  * @authors CJ Duffee, Jeffrey Wang
 */
 ?>
+
 <!DOCTYPE html lang=en.US>
 <?php
 // Import settings
@@ -46,7 +47,28 @@ if ( empty ( $user_settings['language'] ) ) {
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="./javascript.js"></script>
-
+        <script>
+            function notificationsTab()
+            {
+                var iframe = document.getElementById('leftFrame');
+                iframe.src = './notifications.php';
+            }
+            function gradeTab()
+            {
+                var iframe = document.getElementById('leftFrame');
+                iframe.src = './grades.php';
+            }
+            function vitalsTab()
+            {
+                var iframe = document.getElementById('leftFrame');
+                iframe.src = './vitals.php';
+            }
+            function attendanceTab()
+            {
+                var iframe = document.getElementById('leftFrame');
+                iframe.src = './attendance.php';
+            }
+        </script>
     </head>
     <body>
         <div class="container">
@@ -56,16 +78,16 @@ if ( empty ( $user_settings['language'] ) ) {
 		?>
             <br />
             <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a href="index.php?page=notifications"><?php echo $translations['notifications']; ?></a></li>
-                <li role="presentation"><a href="index.php?page=grades"><?php echo $translations['grades']; ?></a></li>
-                <li role="presentation"><a href="index.php?page=vitals"><?php echo $translations['vitals']; ?></a></li>
-                <li role="presentation"><a href="index.php?page=attendance"><?php echo $translations['attendance']; ?></a></li>
+                <li role="presentation" class="active"><a onclick="notificationsTab()" href="javascript:void(0)"><?php echo $translations['notifications']; ?></a></li>
+                <li role="presentation"><a onclick="gradeTab()" href="javascript:void(0)"><?php echo $translations['grades']; ?></a></li>
+                <li role="presentation"><a onclick="vitalsTab()" href="javascript:void(0)"><?php echo $translations['vitals']; ?></a></li>
+                <li role="presentation"><a onclick="attendanceTab()" href="javascript:void(0)"><?php echo $translations['attendance']; ?></a></li>
             </ul>
             <!--<iframe src="/includes/pages/<?php //echo $page; ?>.php">
                 Your browser doesn't seem to support iframes. Pluma requires iframes.
             </iframe>-->
             <div id="leftbar">
-                <iframe src="./notifications.php" width="100%"></iframe>
+                <iframe id="leftFrame" src="./notifications.php" width="100%"></iframe>
             </div>
             <div id="rightbar">
                 <iframe src="./calendar.php" width="100%"></iframe>
