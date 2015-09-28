@@ -10,6 +10,6 @@ mySQL document that contains
 
 2. hashed password+ salt
 
-3. array of classes
+3. array of classes ( each its own object to manipulate)
 
 4. settings
