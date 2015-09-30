@@ -1,3 +1,4 @@
+<?php
 /**
  * Pluma
  * Traductions pour français
