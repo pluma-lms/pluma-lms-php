@@ -7,6 +7,7 @@ if ( empty ( $user_settings['language'] ) ) {
 }?>
 <html>
     <head>
+    	<meta charset="utf-8"/>
         <style>
             #leftbar
             {
