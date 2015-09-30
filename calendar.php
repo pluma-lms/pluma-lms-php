@@ -1,4 +1,7 @@
 <html>
+    <head>
+         <meta charset="utf-8"/>
+    </head>
     <body>
         <?php
                 date_default_timezone_set('America/Chicago');
