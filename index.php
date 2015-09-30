@@ -1,28 +1,10 @@
-<?php
-/**
- * Pluma
- * Main page
- * @authors CJ Duffee, Jeffrey Wang
-*/
-?>
-
 <!DOCTYPE html lang=en.US>
 <?php
-// Import settings
-//require_once ( "settings.php" );
-// Get user settings and preferences here
-// Get language
 if ( empty ( $user_settings['language'] ) ) {
     require_once ( "includes/languages/language_eng.php" );
 } else {
     require_once ( "includes/languages/language_" . $user_settings['language'] . ".php" ); 
-}
-//if ( empty ( $_REQUEST['page'] ) ) {
-//  $page = 'home';
-//} else {
-//  $page = $_REQUEST['page'];
-//}
-?>
+}?>
 <html>
     <head>
         <style>
@@ -90,8 +72,6 @@ if ( empty ( $user_settings['language'] ) ) {
         <div class="container">
             <h1>Pluma</h1>
             <br />
-            <?php //echo "<img src=\"" . $organization_settings['image_url'] . "\" alt=\"" . $organization_settings['name'] . " />"; 
-		?>
             <br />
             <ul class="nav nav-pills">
                 <li role="presentation" class="active"><a onclick="setLeftTab(0)" href="javascript:void(0)"><?php echo $translations['notifications']; ?></a></li>
@@ -99,9 +79,6 @@ if ( empty ( $user_settings['language'] ) ) {
                 <li role="presentation"><a onclick="setLeftTab(2)" href="javascript:void(0)"><?php echo $translations['vitals']; ?></a></li>
                 <li role="presentation"><a onclick="setLeftTab(3)" href="javascript:void(0)"><?php echo $translations['attendance']; ?></a></li>
             </ul>
-            <!--<iframe src="/includes/pages/<?php //echo $page; ?>.php">
-                Your browser doesn't seem to support iframes. Pluma requires iframes.
-            </iframe>-->
             <div id="leftbar">
                 <iframe id="leftFrame" src="./notifications.php" width="100%"></iframe>
             </div>
