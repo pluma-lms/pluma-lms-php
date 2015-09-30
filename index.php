@@ -4,10 +4,11 @@ if ( empty ( $user_settings['language'] ) ) {
     require_once ( "includes/languages/language_eng.php" );
 } else {
     require_once ( "includes/languages/language_" . $user_settings['language'] . ".php" ); 
-}?>
+}
+?>
 <html>
     <head>
-    	<meta charset="utf-8"/>
+        <meta charset="utf-8"/>
         <style>
             #leftbar
             {
@@ -25,10 +26,6 @@ if ( empty ( $user_settings['language'] ) ) {
             }
         </style>
         <title><?php //echo $organization_settings['name']; ?>Pluma</title>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="./javascript.js"></script>
         <script>
             var pages=['./notifications.php', './grades.php', './vitals.php','./attendance.php'];
@@ -70,17 +67,14 @@ if ( empty ( $user_settings['language'] ) ) {
         </script>
     </head>
     <body>
-        <div class="container">
-            <h1>Pluma</h1>
-            <br />
-            <br />
-            <ul class="nav nav-pills">
-                <li role="presentation" class="active"><a onclick="setLeftTab(0)" href="javascript:void(0)"><?php echo $translations['notifications']; ?></a></li>
-                <li role="presentation"><a onclick="setLeftTab(1)" href="javascript:void(0)"><?php echo $translations['grades']; ?></a></li>
-                <li role="presentation"><a onclick="setLeftTab(2)" href="javascript:void(0)"><?php echo $translations['vitals']; ?></a></li>
-                <li role="presentation"><a onclick="setLeftTab(3)" href="javascript:void(0)"><?php echo $translations['attendance']; ?></a></li>
-            </ul>
-            <div id="leftbar">
+        <h1>Pluma</h1>
+        <div>
+            <button type="button" onclick="setLeftTab(0)"><?php echo $translations['notifications']; ?></button>
+            <button type="button" onclick="setLeftTab(1)"><?php echo $translations['grades']; ?></button>
+            <button type="button" onclick="setLeftTab(2)"><?php echo $translations['vitals']; ?></button>
+            <button type="button" onclick="setLeftTab(3)"><?php echo $translations['attendance']; ?></button>
+        </div>
+            <div id="leftbar">  
                 <iframe id="leftFrame" src="./notifications.php" width="100%"></iframe>
             </div>
             <div id="rightbar">
