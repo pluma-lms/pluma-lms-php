@@ -10,7 +10,7 @@ if ( empty ( $user_settings['language'] ) ) {
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="./css.css">          
-        <title><?php echo $organization_settings['name']; ?> | <?php echo $translations['pluma']; ?></title>
+        <title>Pluma</title>
         <script src="./javascript.js"></script>
         <script>
             var pages=['./notifications.php', './grades.php', './vitals.php','./attendance.php'];
@@ -51,7 +51,6 @@ if ( empty ( $user_settings['language'] ) ) {
     </head>
     <body>
         <h1><?php echo $translations['pluma']; ?></h1> 
-        <?php echo "<img src=\"" . $organization_settings['image_url'] . "\" alt=\"" . $organization_settings['name'] . " />"; ?> 
         <div>
             <button type="button" class="butt selectedButt" onclick="setLeftTab(0)" id="0"><?php echo $translations['notifications']; ?></button>
             <button type="button" class="butt" onclick="setLeftTab(1)" id="1"><?php echo $translations['grades']; ?></button>
