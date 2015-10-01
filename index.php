@@ -1,4 +1,4 @@
-<!DOCTYPE html lang=en.US>
+<!DOCTYPE html lang="en.US">
 <?php
 if ( empty ( $user_settings['language'] ) ) {
     require_once ( "includes/languages/language_eng.php" );
@@ -24,7 +24,6 @@ if ( empty ( $user_settings['language'] ) ) {
                         {
                             pageIndex=0;
                         }
-
                         break;
                     case 37:
                         pageIndex=pageIndex-1;
@@ -52,6 +51,7 @@ if ( empty ( $user_settings['language'] ) ) {
     </head>
     <body>
         <h1><?php echo $translations['pluma']; ?></h1> 
+        <?php echo "<img src=\"" . $organization_settings['image_url'] . "\" alt=\"" . $organization_settings['name'] . " />"; ?> 
         <div>
             <button type="button" class="butt selectedButt" onclick="setLeftTab(0)" id="0"><?php echo $translations['notifications']; ?></button>
             <button type="button" class="butt" onclick="setLeftTab(1)" id="1"><?php echo $translations['grades']; ?></button>
