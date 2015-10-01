@@ -115,5 +115,5 @@ if ( empty ( $user_settings['language'] ) ) {
                 <iframe src="./calendar.php" width="100%"></iframe>
             </div>
     </div>
-    </body>
+    </body> 
 </html>
