@@ -1,4 +1,4 @@
-<!DOCTYPE html lang="en.US">
+<!DOCTYPE html lang=en.US>
 <?php
 if ( empty ( $user_settings['language'] ) ) {
     require_once ( "includes/languages/language_eng.php" );
@@ -9,51 +9,7 @@ if ( empty ( $user_settings['language'] ) ) {
 <html>
     <head>
         <meta charset="utf-8"/>
-        <style>
-            
-            .butt
-            {
-                margin-left: 0px;
-                margin-right: 0px; 
-                float: left;
-                border: 1px;
-                height:50px;
-                width:10%;
-                font-size: large;
-            }
-            
-            .butt {
-                background-color: #ADD8E6;
-            }
-            
-            .butt:hover {
-               background-color: #BDE8F6;
-                color:white;
-                font-size: large;
-            }
-            
-            .butt.selectedButt 
-            {
-                background-color: blue;
-            }
-            
-            #leftbar
-            {
-                float: left;
-                width: 49%;
-                clear: left;
-            }
-            #rightbar
-            {
-                float: right;
-                width: 49%;
-            }
-            h1
-            {
-                font-style: italic;
-            }
-            
-        </style>
+        <link rel="stylesheet" type="text/css" href="./css.css">          
         <title><?php echo $organization_settings['name']; ?> | <?php echo $translations['pluma']; ?></title>
         <script src="./javascript.js"></script>
         <script>
@@ -70,9 +26,6 @@ if ( empty ( $user_settings['language'] ) ) {
                         }
 
                         break;
-                    //case 38:
-                     //   alert('up');
-                        //break;
                     case 37:
                         pageIndex=pageIndex-1;
                         if(pageIndex<0)
@@ -80,9 +33,6 @@ if ( empty ( $user_settings['language'] ) ) {
                             pageIndex=pages.length-1;
                         }
                         break;
-                   // case 40:
-                     //   alert('down');
-                     //   break;
                 }
                 setLeftTab(pageIndex);
 	    };
@@ -101,8 +51,7 @@ if ( empty ( $user_settings['language'] ) ) {
         </script>
     </head>
     <body>
-        <h1><?php echo $translations['pluma']; ?></h1>
-        <?php echo "<img src=\"" . $organization_settings['image_url'] . "\" alt=\"" . $organization_settings['name'] . " />"; ?>
+        <h1><?php echo $translations['pluma']; ?></h1> 
         <div>
             <button type="button" class="butt selectedButt" onclick="setLeftTab(0)" id="0"><?php echo $translations['notifications']; ?></button>
             <button type="button" class="butt" onclick="setLeftTab(1)" id="1"><?php echo $translations['grades']; ?></button>
@@ -116,5 +65,5 @@ if ( empty ( $user_settings['language'] ) ) {
                 <iframe src="./calendar.php" width="100%"></iframe>
             </div>
     </div>
-    </body> 
+    </body>
 </html>
