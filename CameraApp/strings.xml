@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Pluma</string>
+
+    <string name="hello_world">Camera App</string>
+
+
+    <string name="button_camera">Camera</string>
+
+
+    <string name="image_cd_camera">Hello world!</string>
+
+    <string name="action_settings">Generic cd </string>
+
+    <string name="button_color">Click me</string>
+
+</resources>
