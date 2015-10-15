@@ -64,4 +64,30 @@ class user_data {
     }
     return $ret_text;
   }
+  // in: {userid, lastname, firstname, DOB}
+  function remove ( $in_user_arr ) {
+    $database = new database_connect();
+    // pull user data
+    $iterator = new Iterator( $database->userlist );
+    if ( $amount == 0 ) {
+      $amount = sizeof ( $database->userlist );
+    }
+    $i = 0;
+    $ret_text = "";
+    while ( $iterator->hasNext() ) {
+      $i++;
+      if ( $amount == $i ) {
+        break;
+      }
+      if ( $in_user_arr == $iterator->next() ) {
+        $iterator->remove();
+      }
+      if ( $iterator->previous() == $iterator->next() ) {
+        $iterator->previous();
+        $iterator->remove();
+      }
+      $ret_text += $iterator->next() + "\n";
+    }
+    return $ret_text;
+  }
 }
