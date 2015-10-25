@@ -13,7 +13,7 @@ if ( empty ( $user_settings['language'] ) ) {
         <title>Pluma</title>
         <script src="./javascript.js"></script>
         <script>
-            var pages=['./notifications.php', './grades.php', './vitals.php','./attendance.php'];
+            var pages=['./index.php?page=notifications', './index.php?page=grades', './index.php?page=vitals','./index.php?page=attendance'];
             var pageIndex=0;
             document.onkeydown = function(e) 
             {
