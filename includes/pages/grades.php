@@ -4,7 +4,7 @@
     </head>
     <body>
         <h1>
-            You may be alive
+            <p>100 everything :)</p>
         </h1>
     </body>
 </html>
