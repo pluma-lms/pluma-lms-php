@@ -1,10 +1,10 @@
 <?php
 /**
  * Pluma
- * User
+ * User_Backbone
 */
 
-interface user {
+interface user_backbone {
   public function set_username ( $username );
   public function set_password ( $password );
   public function set_fullname ( $firstname, $middlename, $lastname );
