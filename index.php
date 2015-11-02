@@ -50,7 +50,21 @@ if ( empty ( $user_settings['language'] ) ) {
         </script>
     </head>
     <body>
-        <h1><?php echo $translations['pluma']; ?></h1> 
+        <h1><?php echo $translations['pluma']; ?></h1>
+        <?php
+        if ( !$_SESSION['user'] ) {
+        ?>
+        <div>
+        	<h2><?php echo $translations['login']; ?></h2>
+        	<form method="post" action="login.php">
+        		<p><label for="username"><?php echo $translations['username']; ?>: </label><input type="text" name="username" /></p>
+        		<p><label for="password"><?php echo $translations['password']; ?>: </label><input type="password" name="password" /></p>
+        		<button type="submit" class="butt"><?php echo $translations['login']; ?></button>
+        	</form>
+        </div>
+        <?php
+        } else {
+        ?>
         <div>
             <button type="button" class="butt selectedButt" onclick="setLeftTab(0)" id="0"><?php echo $translations['notifications']; ?></button>
             <button type="button" class="butt" onclick="setLeftTab(1)" id="1"><?php echo $translations['grades']; ?></button>
@@ -63,6 +77,9 @@ if ( empty ( $user_settings['language'] ) ) {
             <div id="rightbar">
                 <iframe src="./includes/pages/calendar.php" width="100%" height="550"></iframe>
             </div>
-    </div>
+    	</div>
+    	<?php
+        }
+        ?>
     </body>
 </html>
