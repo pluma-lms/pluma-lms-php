@@ -30,7 +30,6 @@ class user_login {
     } else {
     	$this->authstatus = true;
     	return array ( 0, $this->authstatus );
-    	
     }
   }
   public function get_authstatus() {
