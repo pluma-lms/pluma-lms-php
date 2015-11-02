@@ -58,10 +58,10 @@ if ( empty ( $user_settings['language'] ) ) {
             <button type="button" class="butt" onclick="setLeftTab(3)" id="3"><?php echo $translations['attendance']; ?></button>
         </div>
             <div id="leftbar">  
-                <iframe id="leftFrame" src="./notifications.php" width="100%"></iframe>
+                <iframe id="leftFrame" src="./includes/pages/notifications.php" width="100%" height="550"></iframe>
             </div>
             <div id="rightbar">
-                <iframe src="./calendar.php" width="100%"></iframe>
+                <iframe src="./includes/pages/calendar.php" width="100%" height="550"></iframe>
             </div>
     </div>
     </body>

@@ -14,7 +14,7 @@ class database {
   
   // constructor
   // takes settings from settings.php (root dir) and makes a DB object "$db"
-  public __construct() {
+  public function __construct() {
     $dbsettings = $settings->database_settings;
     if ( $dbsettings['type'] == 'mysql' ) {
       $db = new mysqli( $dbsettings['host'], $dbsettings['username'], $dbsettings['password'], $dbsettings['database_name'] );
@@ -23,7 +23,7 @@ class database {
   
   // connect method
   // returns array: {0, $db} for success, {1, errorinfo} for errors
-  public connect() {
+  public function connect() {
     if ($mysqli->connect_errno) {
       return array ( '1', $db->connect_error );
     }
