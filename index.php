@@ -5,6 +5,7 @@ if ( empty ( $user_settings['language'] ) ) {
 } else {
     require_once ( "includes/languages/language_" . $user_settings['language'] . ".php" ); 
 }
+session_start ();
 ?>
 <html>
     <head>
