@@ -53,7 +53,7 @@ session_start ();
     <body>
         <h1><?php echo $translations['pluma']; ?></h1>
         <?php
-        if ( !$_SESSION['user'] ) {
+        if ( !$_SESSION['plumauser'] ) {
         ?>
         <div>
         	<h2><?php echo $translations['login']; ?></h2>
