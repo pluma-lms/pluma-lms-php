@@ -4,6 +4,8 @@
  * User_Login
 */
 
+require_once ( 'database.php' );
+
 class user_login {
   private $username, $password, $db, $authstatus;
   
