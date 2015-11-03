@@ -1,4 +1,3 @@
-<!DOCTYPE html lang="en.US">
 <?php
 if ( empty ( $user_settings['language'] ) ) {
     require_once ( "includes/languages/language_eng.php" );
@@ -7,6 +6,7 @@ if ( empty ( $user_settings['language'] ) ) {
 }
 session_start ();
 ?>
+<!DOCTYPE html lang="en.US">
 <html>
     <head>
         <meta charset="utf-8"/>
