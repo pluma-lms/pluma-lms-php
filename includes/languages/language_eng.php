@@ -10,4 +10,8 @@ $translations = array (
   'grades' => 'Grades',
   'vitals' => 'Vitals',
   'attendance' => 'Attendance',
+  'pluma' => 'Pluma',
+  'username' => 'Username',
+  'password' => 'Password',
+  'login' => 'Login',
 );
