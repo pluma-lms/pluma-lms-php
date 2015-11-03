@@ -24,7 +24,7 @@ class database {
   // connect method
   // returns array: {0, $db} for success, {1, errorinfo} for errors
   public function connect() {
-    if ($mysqli->connect_errno) {
+    if ($db->connect_errno) {
       return array ( 1, $db->connect_error );
     }
     return array ( 0, $db );
