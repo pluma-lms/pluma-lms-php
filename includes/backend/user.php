@@ -3,6 +3,7 @@
  * Pluma
  * User
 */
+require_once ( 'user_backbone.php' );
 
 class user implements user_backbone {
   private $username, $firstname, $middlename, $lastname, $groupname;
