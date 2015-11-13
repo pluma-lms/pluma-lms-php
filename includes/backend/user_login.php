@@ -16,7 +16,7 @@ class user_login {
   public function login () {
     $database = new database();
     $db_arr = $database->connect();
-    if ( $db_arr[0] == 1 ) {
+    if ( $db_arr[0] == 0 ) {
       return array ( 1, $db_arr[1] );
     }
     $this->db = $db_arr[1];
