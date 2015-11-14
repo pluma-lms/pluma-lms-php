@@ -14,4 +14,9 @@ $translations = array (
   'username' => 'Username',
   'password' => 'Password',
   'login' => 'Login',
+  'login_success' => 'Login successful!',
+  'login_success_description' => 'You may now enter Pluma.',
+  'login_failed' => 'Login failed',
+  'login_failed_description' => 'We weren\'t able to log you in. Try again, perhaps? Or here\'s a reason why',
+  'redirecting_notice' => 'Redirecting in 2 seconds, or click here to continue now.',
 );

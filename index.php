@@ -51,6 +51,7 @@ session_start ();
         </script>
     </head>
     <body>
+		<div id="username" align="right"><?php echo $_SESSION['plumauser']; ?></div>
         <h1><?php echo $translations['pluma']; ?></h1>
         <?php
         if ( !$_SESSION['plumauser'] ) {
