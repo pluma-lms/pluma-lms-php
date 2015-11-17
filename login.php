@@ -19,7 +19,7 @@ $action = new user_login( $username, $password );
 $login_returned = $action->login();
 if ( $login_returned[1] === true ) {
   $login_proceed_1 = true;
-} elseif ( $login_returned[0] == 2 ) {
+} elseif ( $login_returned[0] == 2 ) { 
   $login_proceed_1 = false;
   $login_message = $login_returned[1];
 }
