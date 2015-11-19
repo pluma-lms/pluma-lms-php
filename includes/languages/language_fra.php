@@ -1,7 +1,7 @@
 <?php
 /**
  * Pluma
- * Traductions pour français
+ * Traductions pour francais
  * @traducteur Jeffrey Wang
 */
 
