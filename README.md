@@ -2,7 +2,7 @@
 A learning management system that combines popular solutions for education into an all-in-one, catch-all package.
 
 ## Design principles
-Pluma keeps several key points in mind. These are:
+Pluma (PHP) keeps several key points in mind. These are:
 - Object-oriented, easy-to-understand code.
 - No daemon needs to be started in order to run Pluma LMS. We highly dislike them.
 - Pluma intends to replace many different, fragmented, and incomplete learning management systems and other educational software such as Moodle, Canvas, Blackboard, Weebly, Edmodo, Home Access Center/Teacher Access Center, Remind.com, Eduphoria. There is no need to use all of these different softwares and services with a monolithic, complete LMS never seen before like Pluma.
@@ -13,10 +13,6 @@ Pluma keeps several key points in mind. These are:
 - PHP 5.6 and above are officially supported. You may try PHP 5.3-5.5 at your own risk.
 - MySQL 5 and above. Once again, you may try older versions at your own risk.
 - Google Chrome for Pluma LMS endusers.
-
-## Android app requirements
-- Android 4.4 KitKat
-- An internet connection
 
 # Download and installation
 You may download the latest stable release of Pluma LMS from above.
