@@ -1,7 +1,7 @@
 <?php
 /**
  * Pluma
- * User
+ * Generic user
 */
 require_once ( 'user_backbone.php' );
 
