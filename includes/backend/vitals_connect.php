@@ -10,8 +10,11 @@ class vitals_connect {
   private $dbconnector;
   private $db;
   
-  public function __construct( $database ) {
-    $this->db = $database;
+  public function __construct() {
+    $this->dbconnector = new database();
+    if ( $this->dbconnector->connect() ) {
+      $this->database_connect();
+    }
   }
   public function database_connect() {
     $this->db = $db->connect()[0];
