@@ -16,22 +16,29 @@ class vitals_connect {
   public function database_connect() {
     $this->db = $db->connect()[0];
   }
-  public function database_action( $database_action ) {
-    $this->username = $this->db->escape_string ( stripslashes ( $this->username ) );
-  	$this->password = $this->db->escape_string ( stripslashes ( $this->password ) );
-    $getuserquery = "SELECT * FROM vitals WHERE user_name='" . $this->username . "' AND user_password='" . $this->password . "'";
-  	$getuserresult = $this->db->query( $getuserquery );
-  	$getuserresult_count = $getuserresult->num_rows;
-    if ( $getuserresult_count != 1 ) {
-    	$this->authstatus = false;
-    	return array ( 2, 'Username and password incorrect.' );
+  public function get_user_info ( $name ) {
+    $name = $this->db->escape_string ( $name );
+    $get_query = "SELECT * FROM vitals WHERE name='" . $name . "'";
+  	$get_result = $this->db->query( $get_query );
+  	$get_result_arr = $get_result->fetch_assoc();
+  	$get_result_count = $get_result->num_rows;
+    if ( $get_result_count != 1 ) {
+    	return array ( 2, 'Name not found' );
     } else {
-    	$this->authstatus = true;
-    	return array ( 0, $this->authstatus );
+    	return array ( 0, $get_result_assoc );
     }
   }
-  public function set_vitals( $setting_name, $setting_value ) {
-    $this->database_action();
+  public function set_vitals( $name, $setting_name, $setting_value ) {
+    $name = $this->db->escape_string ( $name );
+    $setting_value = $this->db->escape_string ( $setting_value );
+    $get_query = "UPDATE vitals
+      SET " . $setting_name . " = '". $setting_value ."'
+      WHERE name='" . $name . "'";
+  	$get_result = $this->db->query( $get_query );
+    if ( !$get_result ) {
+    	return array ( 2, 'Unsuccessful' );
+    } else {
+    	return array ( 0, 'Success' );
+    }
   }
-  public function 
 }
