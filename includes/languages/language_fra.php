@@ -19,4 +19,11 @@ $translations = array (
   'login_failed' => 'Login rat&eacute;',
   'login_failed_description' => 'Nous ne sommes pas en mesure de vous connecter. Essayer &agrave; nouveau, peut-&ecirc;tre? Ou ici est une raison pour laquelle',
   'redirecting_notice' => 'Redirection vers 2 secondes, ou cliquez ici pour continuer maintenant.',
+  'male' => 'm&acircum;le',
+  'female' => 'femelle',
+  'bot' => 'robot',
+  'prefernottosay' => 'pr&eacute;f&egrave;rer ne pas r&eacute;pondre',
+  'student' => '&eacute;tuidant',
+  'teacher' => 'professeur',
+  'tech' => 'administrateur technique',
 );

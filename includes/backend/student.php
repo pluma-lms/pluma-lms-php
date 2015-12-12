@@ -9,13 +9,17 @@ require_once ( 'vitals.php' );
 class student implements user_backbone {
   private $username, $firstname, $middlename, $lastname, $groupname, $vitals;
   
-  public function __construct( $username, $firstname, $middlename, $lastname, $groupname, $vitals ) {
+  public function __construct( $username, $firstname, $middlename, $lastname, $groupname ) {
     $this->username = $username;
     $this->firstname = $firstname;
     $this->middlename = $middlename;
     $this->lastname = $lastname;
     $this->groupname = $groupname;
-    $this->vitals = $vitals;
+	if ( $middlename == null || empty ( $middlename ) || !isset ( $middlename ) || !$middlename ) {
+		$this->vitals = new vitals ( $firstname + " " + $lastname, false, null, null, null, null, null, null, null, null );
+	} else {
+		$this->vitals = new vitals ( $firstname + " " + $middlename + " " + $lastname, false, null, null, null, null, null, null, null, null );
+	}
   }
   public function set_username ( $username ) {
     $this->username = $username;

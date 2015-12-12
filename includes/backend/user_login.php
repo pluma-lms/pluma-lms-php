@@ -1,7 +1,7 @@
 <?php
 /**
  * Pluma
- * User_Login
+ * user_login
 */
 
 require_once ( 'database.php' );
@@ -21,13 +21,9 @@ class user_login {
     }
     $this->db = $db_arr[1];
     // continue implementing login check
-    //$this->username = mysqli_real_escape_string ( $this->db, stripslashes ( $this->username ) );
 	$this->username = $this->db->escape_string ( stripslashes ( $this->username ) );
-    //$this->password = mysqli_real_escape_string ( $this->db, stripslashes ( $this->password ) );
 	$this->password = $this->db->escape_string ( stripslashes ( $this->password ) );
     $getuserquery = "SELECT * FROM user WHERE user_name='" . $this->username . "' AND user_password='" . $this->password . "'";
-    //$getuserresult = mysqli_query ( $this->db, $getuserquery );
-    //$getuserresult_count = mysqli_num_rows ( $getuserresult );
 	$getuserresult = $this->db->query( $getuserquery );
 	$getuserresult_count = $getuserresult->num_rows;
     if ( $getuserresult_count != 1 ) {

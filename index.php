@@ -14,7 +14,7 @@ session_start ();
         <title>Pluma</title>
         <script src="./javascript.js"></script>
         <script>
-            var pages=['./includes/pages/notifications.php', './includes/pages/grades.php', './includes/pages/vitals.php','./includes/pages/attendance.php'];
+            var pages=['./includes/pages/notifications.php', './includes/pages/grades.php', './includes/pages/vitalspg.php','./includes/pages/attendance.php'];
             var pageIndex=0;
             document.onkeydown = function(e) 
             {
@@ -51,7 +51,7 @@ session_start ();
         </script>
     </head>
     <body>
-		<div id="username" align="right"><?php echo $_SESSION['plumauser']; ?><a href="./logout.php">Logout</a></div>
+		<?php if ( $_SESSION['plumauser'] ) { ?><div id="username" align="right"><?php echo $_SESSION['plumauser']; ?> &bull; <a href="./logout.php">Logout</a></div><?php } ?>
         <h1><?php echo $translations['pluma']; ?></h1>
         <?php
         if ( !$_SESSION['plumauser'] ) {

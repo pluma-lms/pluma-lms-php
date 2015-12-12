@@ -19,4 +19,11 @@ $translations = array (
   'login_failed' => 'Login failed',
   'login_failed_description' => 'We weren\'t able to log you in. Try again, perhaps? Or here\'s a reason why',
   'redirecting_notice' => 'Redirecting in 2 seconds, or click here to continue now.',
+  'male' => 'Male',
+  'female' => 'Female',
+  'bot' => 'Bot',
+  'prefernottosay' => 'Prefer not to say',
+  'student' => 'Student',
+  'teacher' => 'Teacher',
+  'tech' => 'Technical Administrator',
 );
