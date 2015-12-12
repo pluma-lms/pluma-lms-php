@@ -17,7 +17,7 @@ $username = $_REQUEST['username'];
 $password = $_REQUEST['password'];
 $action = new user_login( $username, $password );
 $login_returned = $action->login();
-if ( $login_returned[1] === true ) {
+if ( $login_returned[0] === 0 ) {
   $login_proceed_1 = true;
 } elseif ( $login_returned[0] == 2 ) { 
   $login_proceed_1 = false;
@@ -27,9 +27,18 @@ if ( $login_proceed_1 ) {
   $_SESSION['plumauser'] = $username;
 }
 ?>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="./css.css">          
+        <title>Pluma</title>
+        <script src="./javascript.js"></script>
+	</head>
+	<body>
+<img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" />
 <h1><?php echo $translations['pluma']; ?></h1>
 <?php
-if ( $login_returned[1] == true ) {
+if ( $login_proceed_1 == true ) {
 ?>
 <h2><?php echo $translations['login_success']; ?></p>
 <p><?php echo $translations['login_success_description']; ?></p>
@@ -40,6 +49,9 @@ if ( $login_returned[1] == true ) {
 ?>
 <h2><?php echo $translations['login_failed']; ?></p>
 <p><?php echo $translations['login_failed_description'] . ": " . $login_message; ?></p>
+<meta http-equiv="refresh" content="2; url='<?php echo $_SERVER['HTTPS'] ? 'https://' : 'http://' . $_SERVER['SERVER_NAME'] . substr ( $_SERVER['REQUEST_URI'], 0, -10 ) . '/index.php'; ?>">
 <?php
 }
 ?>
+	</body>
+</html>

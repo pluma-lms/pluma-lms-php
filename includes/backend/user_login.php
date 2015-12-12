@@ -26,13 +26,15 @@ class user_login {
     $getuserquery = "SELECT * FROM user WHERE user_name='" . $this->username . "' AND user_password='" . $this->password . "'";
 	$getuserresult = $this->db->query( $getuserquery );
 	$getuserresult_count = $getuserresult->num_rows;
-    if ( $getuserresult_count != 1 ) {
+    if ( $getuserresult_count == 0 ) {
     	$this->authstatus = false;
     	return array ( 2, 'Username and password incorrect.' );
-    } else {
+    } elseif ( $getuserresult_count == 1 ) {
     	$this->authstatus = true;
     	return array ( 0, $this->authstatus );
-    }
+    } else {
+		return array ( 2, 'MySQL returning weird things.' );
+	}
   }
   public function get_authstatus() {
     return $this->authstatus;

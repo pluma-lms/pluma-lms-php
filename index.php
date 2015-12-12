@@ -5,6 +5,7 @@ if ( empty ( $user_settings['language'] ) ) {
     require_once ( "includes/languages/language_" . $user_settings['language'] . ".php" ); 
 }
 session_start ();
+require_once ( 'version.php' );
 ?>
 <!DOCTYPE html lang="en.US">
 <html>
@@ -52,7 +53,8 @@ session_start ();
     </head>
     <body>
 		<?php if ( $_SESSION['plumauser'] ) { ?><div id="username" align="right"><?php echo $_SESSION['plumauser']; ?> &bull; <a href="./logout.php">Logout</a></div><?php } ?>
-        <h1><?php echo $translations['pluma']; ?></h1>
+        <img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" />
+		<h1><?php echo $translations['pluma']; ?></h1>
         <?php
         if ( !$_SESSION['plumauser'] ) {
         ?>
@@ -73,14 +75,23 @@ session_start ();
             <button type="button" class="butt" onclick="setLeftTab(2)" id="2"><?php echo $translations['vitals']; ?></button>
             <button type="button" class="butt" onclick="setLeftTab(3)" id="3"><?php echo $translations['attendance']; ?></button>
         </div>
-            <div id="leftbar">  
-                <iframe id="leftFrame" src="./includes/pages/notifications.php" width="100%" height="550"></iframe>
-            </div>
-            <div id="rightbar">
-                <iframe src="./includes/pages/calendar.php" width="100%" height="550"></iframe>
-            </div>
-    	</div>
-    	<?php
+		<div id="leftbar">  
+			<iframe id="leftFrame" src="./includes/pages/notifications.php" width="100%" height="550"></iframe>
+		</div>
+		<div id="rightbar">
+			<iframe src="./includes/pages/calendar.php" width="100%" height="550"></iframe>
+		</div>
+		<br clear="all" />
+		<p>&copy; 2015 Pluma LMS Development Team. All rights reserved.</p>
+		<?php
+		if ( $_REQUEST['diagnostics'] == true ) {
+		  ?>
+		  <p>Pluma LMS (PHP)</p>
+		  <p><?php echo $version; ?> &mdash; <?php echo $codename; ?></p>
+		  <p>Lead developer: Jeffrey Wang</p>
+		  <p>Other contributors: CJ Duffee, Sammy Shin</p>
+		  <?php
+		}
         }
         ?>
     </body>

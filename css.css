@@ -1,46 +1,39 @@
-.butt
-            {
-                margin-left: 0px;
-                margin-right: 0px; 
-                float: left;
-                border: 1px;
-                height:50px;
-                width:10%;
-                font-size: large;
-            }
-            
-            .butt {
-                background-color: #ADD8E6;
-            }
-            
-            .butt:hover {
-               background-color: #BDE8F6;
-                font-size: large;
-            }
-            
-            .butt.selectedButt 
-            {
-                background-color: blue;
-            }
-            
-            .butt.selectedButt:hover 
-            {
-                background-color: blue;
-                color: white;
-            }
-            
-            #leftbar
-            {
-                float: left;
-                width: 49%;
-                clear: left;
-            }
-            #rightbar
-            {
-                float: right;
-                width: 49%;
-            }
-            h1
-            {
-                font-style: italic;
-            }
+@font-face {
+	font-family: Bookman; src: url('includes/assets/bookman.ttf');
+} 
+body {
+	font-family: Bookman;
+}
+.butt {
+  margin-left: 0px;
+  margin-right: 0px; 
+  float: left;
+  border: 1px;
+  height:50px;
+  width:10%;
+  font-size: large;
+  background-color: #ADD8E6;
+}
+.butt:hover {
+  background-color: #BDE8F6;
+  font-size: large;
+}
+.butt.selectedButt {
+  background-color: blue;
+}
+.butt.selectedButt:hover  {
+  background-color: blue;
+  color: white;
+}
+#leftbar {
+  float: left;
+  width: 49%;
+  clear: left;
+}
+#rightbar {
+  float: right;
+  width: 49%;
+}
+h1 {
+  font-style: italic;
+}
