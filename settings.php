@@ -12,7 +12,7 @@ class settings {
   
   public $database_settings = array (
     'type' => 'mysql',
-    'host' => 'mysql.mywikis.com',
+    'host' => 'mysql.loremisd.edu',
     'username' => 'loremisd_webapps',
     'password' => 'ha! NO.',
     'database_name' => 'lorem_pluma_production',
