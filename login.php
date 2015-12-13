@@ -30,9 +30,9 @@ if ( $login_proceed_1 ) {
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="./css.css">          
         <title>Pluma</title>
-        <script src="./javascript.js"></script>
+        <link rel="stylesheet" type="text/css" href="./includes/resources/main.css">
+        <script src="./includes/resources/main.js"></script>
 	</head>
 	<body>
 <img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" />
