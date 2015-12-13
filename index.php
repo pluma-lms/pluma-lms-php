@@ -11,9 +11,9 @@ require_once ( 'version.php' );
 <html>
     <head>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" type="text/css" href="./css.css">          
         <title>Pluma</title>
-        <script src="./javascript.js"></script>
+        <link rel="stylesheet" type="text/css" href="./includes/resources/main.css">
+        <script src="./includes/resources/main.js"></script>
         <script>
             var pages=['./includes/pages/notifications.php', './includes/pages/grades.php', './includes/pages/vitalspg.php','./includes/pages/attendance.php'];
             var pageIndex=0;
