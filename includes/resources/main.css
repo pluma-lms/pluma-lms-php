@@ -1,39 +1,49 @@
 @font-face {
-	font-family: Bookman; src: url('includes/assets/bookman.ttf');
-} 
+    font-family: Bookman; src: url('includes/assets/bookman.ttf');
+}
+
+@keyframes background {
+    0% {background-color: Azure;}
+    20% {background-color: Aquamarine;}
+    40% {background-color: DarkTurquoise;}
+    60% {background-color: DeepSkyBlue;}
+    80% {background-color: MediumSpringGreen;}
+    100% {background-color: PaleGreen;}
+}
+
 body {
-	font-family: Bookman;
+    font-family: Bookman;
 }
 .butt {
-  margin-left: 0px;
-  margin-right: 0px; 
-  float: left;
-  border: 1px;
-  height:50px;
-  width:10%;
-  font-size: large;
-  background-color: #ADD8E6;
+    margin-left: 0px;
+    margin-right: 0px; 
+    float: left;
+    border: 1px;
+    height:50px;
+    width:10%;
+    font-size: large;
+    background-color: #ADD8E6;
 }
 .butt:hover {
-  background-color: #BDE8F6;
-  font-size: large;
+    background-color: #BDE8F6;
+    font-size: large;
 }
 .butt.selectedButt {
-  background-color: blue;
+    background-color: blue;
 }
 .butt.selectedButt:hover  {
-  background-color: blue;
-  color: white;
+    background-color: blue;
+    color: white;
 }
 #leftbar {
-  float: left;
-  width: 49%;
-  clear: left;
+    float: left;
+    width: 49%;
+    clear: left;
 }
 #rightbar {
-  float: right;
-  width: 49%;
+    float: right;
+    width: 49%;
 }
 h1 {
-  font-style: italic;
+    font-style: italic;
 }
