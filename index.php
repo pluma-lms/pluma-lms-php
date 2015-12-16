@@ -88,8 +88,7 @@ require_once ( 'version.php' );
 			<iframe style="border-style: none;" src="./includes/pages/calendar.php" width="100%" height="550"></iframe>
 		</div>
 		<br clear="all" />
-		<img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" />
-		<p>&copy; 2015 Pluma LMS Development Team. All rights reserved.</p>
+		<p>Made with love by the Pluma LMS Development Team.</p>
 		<?php
 		if ( $_REQUEST['diagnostics'] == true ) {
 		  ?>
