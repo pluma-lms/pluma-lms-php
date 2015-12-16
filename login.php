@@ -32,7 +32,14 @@ if ( $login_proceed_1 ) {
         <meta charset="utf-8"/>
         <title>Pluma</title>
         <link rel="stylesheet" type="text/css" href="./includes/resources/main.css">
-        <script src="./includes/resources/main.js"></script>
+        <style>
+            body {
+                animation-name: background;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        </style>
 	</head>
 	<body>
 <img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" />
