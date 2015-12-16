@@ -13,7 +13,14 @@ require_once ( 'version.php' );
         <meta charset="utf-8"/>
         <title>Pluma</title>
         <link rel="stylesheet" type="text/css" href="./includes/resources/main.css">
-        <script src="./includes/resources/main.js"></script>
+        <style>
+            body {
+                animation-name: background;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+        </style>
         <script>
             var pages=['./includes/pages/notifications.php', './includes/pages/grades.php', './includes/pages/vitalspg.php','./includes/pages/attendance.php'];
             var pageIndex=0;
