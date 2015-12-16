@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Bookman; src: url('includes/assets/bookman.ttf');
+    font-family: Bookman; src: url('../assets/bookman.ttf');
 }
 
 @keyframes background {
@@ -30,6 +30,7 @@ body {
 }
 .butt.selectedButt {
     background-color: blue;
+    color: white;
 }
 .butt.selectedButt:hover  {
     background-color: blue;
