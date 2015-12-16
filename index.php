@@ -60,17 +60,16 @@ require_once ( 'version.php' );
     </head>
     <body>
 		<?php if ( $_SESSION['plumauser'] ) { ?><div id="username" align="right"><?php echo $_SESSION['plumauser']; ?> &bull; <a href="./logout.php">Logout</a></div><?php } ?>
-        <img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" />
-		<h1><?php echo $translations['pluma']; ?></h1>
         <?php
         if ( !$_SESSION['plumauser'] ) {
         ?>
-        <div>
+        <div style="margin-left: auto; margin-right: auto; width: 25%; margin-top: 15%;">
+			<div align="center"><img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" /></div>
         	<h2><?php echo $translations['login']; ?></h2>
         	<form method="post" action="login.php">
-        		<p><label for="username"><?php echo $translations['username']; ?>: </label><input type="text" name="username" /></p>
-        		<p><label for="password"><?php echo $translations['password']; ?>: </label><input type="password" name="password" /></p>
-        		<button type="submit" class="butt"><?php echo $translations['login']; ?></button>
+        		<p><label for="username"><?php echo $translations['username']; ?>: </label><input type="text" name="username" style="float: right;" /></p>
+        		<p><label for="password"><?php echo $translations['password']; ?>: </label><input type="password" name="password" style="float: right;" /></p>
+        		<button type="submit" class="butt" style="width: 100%;"><?php echo $translations['login']; ?></button>
         	</form>
         </div>
         <?php
@@ -89,6 +88,7 @@ require_once ( 'version.php' );
 			<iframe style="border-style: none;" src="./includes/pages/calendar.php" width="100%" height="550"></iframe>
 		</div>
 		<br clear="all" />
+		<img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" />
 		<p>&copy; 2015 Pluma LMS Development Team. All rights reserved.</p>
 		<?php
 		if ( $_REQUEST['diagnostics'] == true ) {

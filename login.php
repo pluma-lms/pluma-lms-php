@@ -42,8 +42,8 @@ if ( $login_proceed_1 ) {
         </style>
 	</head>
 	<body>
+		<div align="center">
 <img src="includes/assets/plumalms-logo.png" width="100px" alt="Pluma LMS" />
-<h1><?php echo $translations['pluma']; ?></h1>
 <?php
 if ( $login_proceed_1 == true ) {
 ?>
@@ -60,5 +60,6 @@ if ( $login_proceed_1 == true ) {
 <?php
 }
 ?>
+		</div>
 	</body>
 </html>
