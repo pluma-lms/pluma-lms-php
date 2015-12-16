@@ -83,10 +83,10 @@ require_once ( 'version.php' );
             <button type="button" class="butt" onclick="setLeftTab(3)" id="3"><?php echo $translations['attendance']; ?></button>
         </div>
 		<div id="leftbar">  
-			<iframe id="leftFrame" src="./includes/pages/notifications.php" width="100%" height="550"></iframe>
+			<iframe style="border-style: none;" id="leftFrame" src="./includes/pages/notifications.php" width="100%" height="550"></iframe>
 		</div>
 		<div id="rightbar">
-			<iframe src="./includes/pages/calendar.php" width="100%" height="550"></iframe>
+			<iframe style="border-style: none;" src="./includes/pages/calendar.php" width="100%" height="550"></iframe>
 		</div>
 		<br clear="all" />
 		<p>&copy; 2015 Pluma LMS Development Team. All rights reserved.</p>
