@@ -17,18 +17,25 @@ class user implements user_backbone {
   }
   public function get_db () {
     $database = new database();
-    $db_arr = $database->connect();
-    if ( $db_arr[0] == 1 ) {
-      return array ( 1, $db_arr[1] );
-    }
-    $this->db = $db_arr[1];
-    $get_query = "SELECT * FROM user WHERE user_name='" . $this->username . "'";
-	$get_result = $this->db->query( $get_query );
-  	$get_result_arr = $get_result->fetch_assoc();
-  	$get_result_count = $get_result->num_rows;
-    if ( $get_result_count != 1 ) {
-    	return array ( 2, 'Name not found' );
-    }
+	$dbtype = $database->get_type();
+	if ( $dbtype == 'mysql' ) {
+		$db_arr = $database->connect();
+		if ( $db_arr[0] == 1 ) {
+		  return array ( 1, $db_arr[1] );
+		}
+		$this->db = $db_arr[1];
+		$get_query = "SELECT * FROM user WHERE user_name='" . $this->username . "'";
+		$get_result = $this->db->query( $get_query );
+		$get_result_arr = $get_result->fetch_assoc();
+		$get_result_count = $get_result->num_rows;
+		if ( $get_result_count != 1 ) {
+			return array ( 2, 'Name not found' );
+		}
+	} elseif ( $dbtype == 'sqlite' ) {
+		$db_arr = $database->connect_sqlite();
+		$this->db = $db_arr;
+		// to be implemented
+	}
 	$this->id = $get_result_arr['user_id'];
 	$this->username = $get_result_arr['user_name'];
 	$this->email = $get_result_arr['user_email'];
@@ -46,17 +53,21 @@ class user implements user_backbone {
 	set_db_each ( 'last_name', $this->lastname );
   }
   public function set_db_each ( $setting_name, $setting_value ) {
-    $name = $this->db->escape_string ( $this->username );
-    $setting_value = $this->db->escape_string ( $setting_value );
-    $get_query = "UPDATE user
-      SET " . $setting_name . " = '". $setting_value ."'
-      WHERE user_name='" . $name . "'";
-  	$get_result = $this->db->query( $get_query );
-    if ( !$get_result ) {
-    	return array ( 2, 'Unsuccessful' );
-    } else {
-    	return array ( 0, 'Success' );
-    }
+    if ( $this->db->get_type() == 'mysql' ) {
+		$name = $this->db->escape_string ( $this->username );
+		$setting_value = $this->db->escape_string ( $setting_value );
+		$get_query = "UPDATE user
+		  SET " . $setting_name . " = '". $setting_value ."'
+		  WHERE user_name='" . $name . "'";
+		$get_result = $this->db->query( $get_query );
+		if ( !$get_result ) {
+			return array ( 2, 'Unsuccessful' );
+		} else {
+			return array ( 0, 'Success' );
+		}
+	} elseif ( $this->db->get_type() == 'sqlite' ) {
+		// to be added
+	}
   }
   public function group_id_to_name ( $id ) {
     if ( $id == 0 ) {

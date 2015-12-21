@@ -11,6 +11,7 @@ class database {
   private $settings;
   private $dbsettings;
   private $db;
+  private $dbtype;
   
   // constructor
   // takes settings from settings.php (root dir) and makes a DB object "$db"
@@ -18,8 +19,12 @@ class database {
 	$settings = new settings();
     $dbsettings = $settings->database_settings;
     if ( $dbsettings['type'] == 'mysql' ) {
+	  $this->dbtype = 'mysql';
       $this->db = new mysqli( $dbsettings['host'], $dbsettings['username'], $dbsettings['password'], $dbsettings['database_name'] );
-    }
+    } elseif ( $dbsettings['type'] == 'sqlite' ) {
+	  $this->dbtype = 'sqlite';
+	  $this->db = new SQLite3( $dbsettings['database_name'] );
+	}
   }
   
   // connect method
@@ -30,4 +35,13 @@ class database {
     }
     return array ( 0, $this->db );
   }
+  
+  public function connect_sqlite() {
+	return $this->db;
+  }
+  
+  public function get_type() {
+    return $this->dbtype;
+  }
+  
 }
