@@ -19,15 +19,16 @@ You may download the latest stable release of Pluma LMS (PHP) from above.
 
 Currently, installation requires the system administrator to simply enter "settings.php" and modify the variables to satisfy their environments. Then, create the database as specified. We will probably add a database creation script soon.
 
-After that, your installation is complete. Pluma LMS (PHP) is committed to minimal setup and absolutely no shell script BS is needed, unless you prefer it. (That being said, daemon scripts like a hypothetical ```launchPluma.sh``` will never exist.)
+After that, your installation is complete. Pluma LMS (PHP) is committed to minimal setup and absolutely no shell script BS is needed, unless you prefer it. (Daemon scripts like a hypothetical ```launchPluma.sh``` will never exist.)
 
 # Contributions
 Anybody is welcome to contribute to Pluma LMS's code. Please fork our repository, make changes, and create a pull request. When you have done so, our core team will review your contribution and ensure it is beneficial for Pluma and reflects our design principles.
 
 # To-do list
 - [ ] Integrate language selector using $_SESSION and DB
-- [ ] SQLite support across-the-board
 - [ ] Move away from iframes, move towards dynamic getting HTML like Node.js flavor is doing
+- [ ] SQLite support
+- [x] Vitals
 - [ ] Notifications
 - [ ] Grades
 - [ ] Calendar
